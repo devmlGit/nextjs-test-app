@@ -1,4 +1,5 @@
 import React from "react";
+import ShowDate from "../components/ShowDate";
 
 interface User {
   id: number;
@@ -11,7 +12,8 @@ const UsersPage = async () => {
   return (
     <>
       <h1>Users</h1>
-      <p>{new Date().toLocaleTimeString()}</p>
+      <ShowDate />
+      <p>Users:</p>
       <ul>
         {data.map((user) => (
           <li key={user.id}>{user.name}</li>
